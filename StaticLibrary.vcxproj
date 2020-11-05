@@ -159,6 +159,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="PossibleFunctions.h" />
     <ClInclude Include="SHEET.h" />
+    <ClInclude Include="StaticLibrary.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
