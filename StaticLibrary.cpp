@@ -312,11 +312,14 @@ void useLeftSidedFunc(BOOKwrapper& b)
     cell_selector(s, r, c, bk);
     cout << "number of sheet to get the first cell from: " << endl;
     cin >> sr;
-    if (sr <0 || sr > b->get_content_length() - 1) {
+    if (sr <0 || sr > bk.get_content_length() - 1) {
         sr = 0;
     }
-    b.decr_num_of_changes_in_the_book();
+    //b.decr_num_of_changes_in_the_book();
+    cout << bk[sr][0][0] << endl;
     bk[s].changeCell(r, c) = bk[sr][0][0];
+    cout << bk << endl;
+    b->set_book(bk);
 }
 
 void printBookWithInfo(BOOKwrapper& bw, BOOK& b)
@@ -324,5 +327,5 @@ void printBookWithInfo(BOOKwrapper& bw, BOOK& b)
     cout << "number of changes ever made to the book: " << endl;
     cout << bw.get_num_of_changes_in_the_book() << endl;
     cout << "the book: " << endl;
-    cout << b << endl;
+    cout << *bw->get_book() << endl;
 }

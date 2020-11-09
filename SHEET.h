@@ -158,7 +158,7 @@ public:
 		set_content_length(size);
 	}
 	void get_value() { CELLCOLUMNS* get_content(); }
-	CELL& changeCell(int i = 2, int j = 5) {
+	CELL& changeCell(int i, int j) {
 		if (i < content_length) {
 			if (j < content[i].get_cols_()) {
 				return content[i][j];

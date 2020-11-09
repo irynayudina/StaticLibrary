@@ -162,6 +162,9 @@ public:
 	BOOK* get_book() {
 		return this;
 	}
+	void set_book(BOOK& b) {
+		*this = b;
+	}
 	void add_value(SHEET& value) {
 		SHEET* temp_sheet = new SHEET[this->content_length];
 		for (int i = 0; i < this->content_length; i++) {
